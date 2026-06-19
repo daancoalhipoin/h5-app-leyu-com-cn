@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://daancoalhipoin.github.io/h5-app-leyu-com-cn/sitemap.xml
