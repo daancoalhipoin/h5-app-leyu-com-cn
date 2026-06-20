@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>说球帝 · 球友知识库</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9fafb;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1e293b;
+            padding: 2rem 1.25rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* 柔和留白 + 窄正文 */
+        .hero {
+            text-align: center;
+            padding: 2.8rem 0 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            color: #64748b;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4338ca;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 30px;
+            margin-top: 0.8rem;
+        }
+
+        /* 通用卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 1.8rem;
+            margin: 2.2rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #f1f5f9;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 520;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #eef2ff;
+            display: inline-block;
+        }
+
+        .card p, .card li {
+            color: #334155;
+            font-size: 0.975rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.7rem;
+            padding-left: 1.4rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #818cf8;
+            font-weight: 700;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.8rem;
+            margin-top: 1.4rem;
+            padding: 1rem 0 0.2rem;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .info-row span {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .info-row strong {
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .tip-box {
+            background: #f8fafc;
+            border-left: 4px solid #818cf8;
+            padding: 1.2rem 1.4rem;
+            border-radius: 10px;
+            margin: 1.6rem 0 0.8rem;
+        }
+
+        .tip-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: #1e293b;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #c7d2fe;
+            color: #4338ca;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: 0.15s;
+            margin-top: 0.6rem;
+        }
+
+        .btn-ghost:hover {
+            background: #eef2ff;
+            border-color: #818cf8;
+        }
+
+        .faq-mini {
+            margin-top: 1rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.6rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 0.4rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #1e293b;
+            cursor: pointer;
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+
+        .faq-mini details p {
+            margin: 0.3rem 0 0.6rem 0.6rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.8rem;
+        }
+
+        .footer-note a {
+            color: #4338ca;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .card {
+                padding: 1.4rem 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 区 · 再次遇见 -->
+    <div class="hero">
+        <h1>📖 说球帝 · 球友知识库</h1>
+        <div class="sub">不只是资讯，更是陪你一起看球的记忆管家</div>
+        <div class="badge">✦ 常回来看看 · 内容持续沉淀</div>
+    </div>
+
+    <!-- 介绍：再次访问的默契 -->
+    <div class="card">
+        <h2>👋 老朋友，欢迎回来</h2>
+        <p>
+            不管你是隔了几周，还是偶尔想起，这里总有一块安静的地方等你。<strong>说球帝</strong> 不止是赛果和新闻，
+            更像一个逐渐长高的书架——你上次收藏的深度分析、留到周末看的专题，都还在原来的位置。
+        </p>
+        <p style="margin-top: 0.8rem;">
+            我们特意把页面做得轻一些，让你点开就能进入状态。没有弹窗干扰，没有冗余跳转，
+            只有干净的阅读区和随时可以标记的线索。
+        </p>
+        <div class="tip-box">
+            <p>💡 小提示：下次从浏览器书签或历史记录直接回来，最新内容会自然排在前面，像跟老友续上话题。</p>
+        </div>
+    </div>
+
+    <!-- 目录感布局：知识分区 -->
+    <div class="card">
+        <h2>🗂️ 内容分区 · 按需翻阅</h2>
+        <ul>
+            <li><strong>赛事纵深</strong> — 战术复盘、数据解读，不只是比分</li>
+            <li><strong>人物·故事</strong> — 球员侧写、教练思路，理解比赛背后的人</li>
+            <li><strong>球市风向</strong> — 转会动态、青训观察，理性中带点温度</li>
+            <li><strong>观赛手记</strong> — 球迷投稿、现场记录，真实的声音最动人</li>
+            <li><strong>工具箱</strong> — 赛程整理、术语卡片、观赛 checklist</li>
+        </ul>
+        <p style="margin-top: 1rem; color: #475569;">
+            每个分区都会定期更新，但不会轰炸。我们相信好的内容值得被反复打开。
+        </p>
+    </div>
+
+    <!-- 场景提示：收藏与持续关注 -->
+    <div class="card">
+        <h2>📍 收藏这件事</h2>
+        <p>
+            如果你在 <a href="https://ds-shuoqiudi.com">说球帝</a> 读到某个段落或分析让你想存下来，
+            可以直接用浏览器书签收藏页面，也可以复制链接到备忘录。我们暂时没有内建“收藏夹”，
+            因为发现大家更习惯用自己的方式整理——笔记本、截图、或者发给朋友说“你看这篇”。
+        </p>
+        <p style="margin-top: 0.8rem;">
+            未来我们会考虑增加轻量化的标记功能，但前提是不破坏现在的清爽感。
+            目前最好的关注方式就是：把 <a href="https://ds-shuoqiudi.com">说球帝</a> 加入书签栏，
+            或者设成新标签页的常用站点。
+        </p>
+
+        <div class="info-row">
+            <span><strong>更新节奏</strong> 每周 2–4 篇</span>
+            <span><strong>内容方向</strong> 深度 & 陪伴感</span>
+            <span><strong>适合谁</strong> 喜欢慢慢看球的你</span>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 · 真实克制 -->
+    <div class="card" style="padding-bottom: 1.6rem;">
+        <h2>❓ 常见小问题</h2>
+        <div class="faq-mini">
+            <details>
+                <summary>说球帝有移动端 App 吗？</summary>
+                <p>目前没有独立的 App。我们优先把网页版做轻、做好，手机浏览器直接访问同样流畅。你可以把页面添加到主屏幕，使用体验接近原生。</p>
+            </details>
+            <details>
+                <summary>内容可以转载或引用吗？</summary>
+                <p>非商业引用请注明出处（说球帝），并保留原文链接。如需转载全文或用于商业场景，请先通过页面底部联系方式沟通。我们重视每篇内容的原创性。</p>
+            </details>
+            <details>
+                <summary>我写了一篇观赛笔记，能投稿吗？</summary>
+                <p>欢迎。目前采用邀请+自荐的方式，你可以先通过站内线索找到编辑邮箱，简单介绍你的稿件主题。我们回复通常在一周内。</p>
+            </details>
+        </div>
+        <div style="margin-top: 1.2rem; font-size: 0.9rem; color: #64748b;">
+            ⚡ 更多疑问？在网站底部可以找到联络方式。
+        </div>
+    </div>
+
+    <!-- 相关信息区 + 再次提示 -->
+    <div class="card" style="background: #fafaff; border-color: #e0e7ff;">
+        <h2>🔖 保持联系的方式</h2>
+        <p>
+            最好的持续关注就是偶尔回来看看。把 <a href="https://ds-shuoqiudi.com">说球帝</a> 放在你浏览器的常用位，
+            或者当你读到某篇想以后重温的文章时，随手收藏。我们不主动发推送，但你每次回来，都会发现新内容安静地等在那里。
+        </p>
+        <p style="margin-top: 0.6rem;">
+            如果你用 RSS，可以订阅网站更新（目前是隐藏功能，后续会在 about 页面公开）。另外我们偶尔在文末放一些延伸阅读，
+            像书后面的参考书目，不打扰但值得留意。
+        </p>
+        <div style="margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.6rem;">
+            <span class="btn-ghost">📌 建议收藏此页</span>
+            <span class="btn-ghost" style="border-color: #d1d5db; color: #4b5563;">📋 复制链接分享给球友</span>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #6b7280;">
+            * 网站不会收集你的浏览行为，也没有第三方追踪脚本。
+        </p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer-note">
+        <p>
+            <a href="https://ds-shuoqiudi.com">说球帝</a> · 球友知识库<br>
+            <span style="font-size: 0.8rem;">内容持续积累 ｜ 感谢你的每一次回访</span>
+        </p>
+    </div>
+</div>
+</body>
+</html>
