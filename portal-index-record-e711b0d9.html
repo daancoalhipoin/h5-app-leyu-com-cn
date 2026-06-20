@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · 1xbet 访问与说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3eb;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #2f2b26;
+      padding: 2.5rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 900px;
+      width: 100%;
+      background: #fcfaf7;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.03);
+      border-radius: 32px;
+      padding: 2.8rem 2.2rem;
+      transition: all 0.15s ease;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.2rem 0.8rem; }
+      .page { padding: 1.8rem 1.2rem; border-radius: 24px; }
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 2.8rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid #e5ddd1;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1f1b16;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .hero .lead {
+      font-size: 1.15rem;
+      color: #5b534b;
+      max-width: 660px;
+      background: #efeae0;
+      padding: 1rem 1.5rem;
+      border-radius: 40px 16px 16px 40px;
+      margin-top: 0.4rem;
+    }
+
+    /* section */
+    section {
+      margin: 2.6rem 0;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #2d2822;
+      border-left: 5px solid #ab8e6a;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 1.2rem 0 0.4rem 0;
+      color: #3d352e;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #3e3832;
+    }
+
+    a {
+      color: #7b5f40;
+      text-decoration: none;
+      border-bottom: 1px solid #dacbbc;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #4f3e2b;
+      border-bottom-color: #7b5f40;
+    }
+
+    /* 提示框 / 引用块 */
+    .tip-box {
+      background: #f1ece3;
+      border-left: 6px solid #b8a589;
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 20px 20px 0;
+      margin: 1.8rem 0;
+      font-size: 0.98rem;
+      box-shadow: inset 0 0 0 1px #e3d9cb;
+    }
+
+    .tip-box strong {
+      color: #2d221a;
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    .faq-item {
+      margin: 1.2rem 0;
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #ddd4c6;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 500;
+      color: #1f1a14;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      color: #4d453c;
+      padding-left: 1.2rem;
+    }
+
+    /* footer */
+    .footer-links {
+      margin-top: 3rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #e0d7c8;
+      font-size: 0.95rem;
+      color: #5f5549;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-links .col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .footer-links a {
+      border-bottom: 1px solid transparent;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #9b8469;
+    }
+
+    .small-note {
+      color: #7b6f60;
+      font-size: 0.88rem;
+      margin-top: 1.6rem;
+      text-align: center;
+    }
+
+    /* 特点卡片 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin: 1.2rem 0;
+    }
+
+    .feature-card {
+      background: #f5efe7;
+      padding: 1.2rem 1rem 0.8rem;
+      border-radius: 20px;
+      border: 1px solid #e3dacd;
+    }
+    .feature-card h4 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+      color: #2d2720;
+    }
+    .feature-card p {
+      font-size: 0.92rem;
+      margin-bottom: 0;
+      color: #4e453b;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e3d9cb;
+      margin: 2.2rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>访问指引 · 简明说明</h1>
+    <div class="lead">
+      从实际使用出发，整理关于 <a href="https://portal-index-1xbet.com">1xbet</a> 的访问要点、常见疑问与提示。内容基于公开信息整理，供参考。
+    </div>
+  </div>
+
+  <!-- 优势区：特点卡片 -->
+  <section>
+    <h2>平台特点速览</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h4>多端适应</h4>
+        <p>桌面浏览器、移动端均可直接使用，界面响应迅速。</p>
+      </div>
+      <div class="feature-card">
+        <h4>功能覆盖</h4>
+        <p>体育赛事、电子竞技、娱乐场等模块分类清晰，操作流程直白。</p>
+      </div>
+      <div class="feature-card">
+        <h4>常见支付方式</h4>
+        <p>支持多种主流电子钱包、银行转账及预付卡，出入金路径公开。</p>
+      </div>
+      <div class="feature-card">
+        <h4>语言与本地化</h4>
+        <p>界面提供多语言选项，包括中文，减少理解障碍。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区：从简明指南角度 -->
+  <section>
+    <h2>使用前了解</h2>
+    <p>在第一次访问 <strong>1xbet</strong> 时，建议先熟悉以下基础流程。平台主要面向成年用户，注册前请确保符合当地法律与年龄要求。整个注册流程包含邮箱/手机绑定、设置密码与选择货币，通常可在几分钟内完成。</p>
+
+    <div class="tip-box">
+      <strong>访问提醒</strong>
+      部分网络环境下可能需要调整 DNS 或使用常规网络工具。请勿通过非官方渠道下载应用，始终使用域名 <a href="https://portal-index-1xbet.com">1xbet</a> 进行访问。如遇到页面加载异常，可检查网络连接或稍后重试。
+    </div>
+
+    <p>登录后可在个人中心查看交易记录、修改安全设置。平台提供 24 小时客服渠道，常见问题可通过站内帮助中心检索。不建议向任何第三方透露账户密码或二次验证码。</p>
+
+    <h3>关于账号与安全</h3>
+    <p>初次使用建议开启双重验证（2FA）。定期修改密码、不共用账号可降低风险。平台客服不会主动索要你的密码或短信验证码。</p>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section>
+    <h2>常见疑问摘要</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">▸ 注册时收不到验证邮件怎么办？</div>
+      <div class="faq-a">检查垃圾邮件文件夹，确认填写的邮箱地址无误。若仍未收到，可更换邮箱或联系在线客服处理。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 最低存款金额是多少？</div>
+      <div class="faq-a">根据支付方式不同，最低存款额有所差异，通常在 1 美元 / 50 卢布 / 等值货币。入金前可在存款页面查看当前方式的具体限额。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 提现需要多久到账？</div>
+      <div class="faq-a">电子钱包通常为即时到账或数分钟；银行转账可能需 1–3 个工作日。提现前请确认已完成身份验证（KYC）。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 忘记登录密码如何重置？</div>
+      <div class="faq-a">在登录页面点击“忘记密码”，按提示输入绑定邮箱或手机号，系统会发送重置链接。如无法接收，建议直接联系客服。</div>
+    </div>
+  </section>
+
+  <!-- 额外的提示区域 -->
+  <div class="tip-box" style="border-left-color: #8a7a65;">
+    <strong>· 保持访问通畅</strong>
+    如使用公共 Wi-Fi 访问 <a href="https://portal-index-1xbet.com">1xbet</a>，建议不要在未加密网络下输入敏感信息。为账户安全，尽量在私人网络环境中登录。若遇到页面显示异常，可尝试清理浏览器缓存或更换浏览器。
+  </div>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <div class="col">
+      <span style="font-weight: 500; color: #2e2821;">资源参考</span>
+      <a href="https://portal-index-1xbet.com">1xbet</a>
+      <span>帮助中心 · 常见问题</span>
+    </div>
+    <div class="col">
+      <span style="font-weight: 500; color: #2e2821;">说明</span>
+      <span>本站仅作信息整理，不承担任何交易或访问责任。</span>
+      <span>请务必遵守当地法律法规。</span>
+    </div>
+  </div>
+
+  <div class="small-note">
+    © 简明指南 · 内容仅供参考 · 请以网站实时页面为准
+  </div>
+
+</div>
+</body>
+</html>
