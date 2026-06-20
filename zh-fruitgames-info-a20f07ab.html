@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果机知识库 · 日常查询与对照</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f0f2f5;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 头部 — 柔和简洁 */
+        .site-header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .site-header h1 {
+            font-weight: 500;
+            font-size: 1.9rem;
+            letter-spacing: 0.02em;
+            color: #1e2a3a;
+            background: #ffffffdd;
+            display: inline-block;
+            padding: 0.6rem 2rem;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .site-header p {
+            margin-top: 0.5rem;
+            color: #5a6b7c;
+            font-size: 1rem;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 卡片通用 */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+            padding: 1.8rem 1.8rem 2rem;
+            flex: 1 1 300px;
+            transition: box-shadow 0.2s, transform 0.1s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #1e2a3a;
+            border-left: 4px solid #aabacf;
+            padding-left: 0.75rem;
+        }
+
+        .card p, .card li {
+            font-size: 0.96rem;
+            color: #3d4a5a;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.6rem;
+        }
+
+        .card ul li {
+            padding: 0.3rem 0 0.3rem 1.2rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #7f8fa1;
+            font-weight: bold;
+        }
+
+        .soft-link {
+            color: #2a5c8a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b6c9dc;
+            transition: border 0.15s;
+        }
+
+        .soft-link:hover {
+            border-bottom-color: #2a5c8a;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #dce3ec;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        /* 提示条 */
+        .notice-strip {
+            background: #f7f9fc;
+            border-radius: 16px;
+            padding: 1.2rem 1.8rem;
+            border: 1px solid #dde4ef;
+            margin: 2.2rem 0 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.4rem 0.8rem;
+        }
+
+        .notice-strip .label {
+            font-weight: 500;
+            color: #2c3e50;
+            background: #dce5f0;
+            padding: 0.1rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+        }
+
+        .notice-strip .text {
+            font-size: 0.95rem;
+            color: #35495e;
+        }
+
+        /* 相关区域 */
+        .related-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-item {
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e7edf5;
+            padding: 1.2rem 1.4rem;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .related-item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1f2a3a;
+        }
+
+        .related-item p {
+            font-size: 0.9rem;
+            color: #4b5b6e;
+        }
+
+        .footnote {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6c7d8e;
+            margin-top: 3rem;
+            border-top: 1px solid #dce3ec;
+            padding-top: 1.8rem;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1.2rem 0.8rem; }
+            .card { padding: 1.5rem; }
+            .site-header h1 { font-size: 1.5rem; padding: 0.4rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- header -->
+    <header class="site-header">
+        <h1>🍒 水果机 · 知识库</h1>
+        <p>日常查询 · 对照索引 · 延伸阅读</p>
+    </header>
+
+    <!-- 卡片网格：三个主要分区 -->
+    <div class="card-grid">
+        <!-- 卡片：说明区 -->
+        <div class="card">
+            <h2>📖 说明区</h2>
+            <p>这里整理的是与 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 相关的概念、常见配置与玩法对照。适合偶尔查询规则、回顾基础设定，或作为新接触者的快速索引。</p>
+            <p style="margin-top: 0.8rem;">内容来源于公开资料与玩家经验汇总，不涉及具体平台推荐。如需直接体验或查阅最新版本，可前往 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 站点。</p>
+        </div>
+
+        <!-- 卡片：提示区 -->
+        <div class="card">
+            <h2>💡 提示区</h2>
+            <ul>
+                <li>不同时期、不同区域的机型在图标排列和赔付线上存在差异，对照时建议以具体界面为准。</li>
+                <li>部分术语（如“倍率”“小彩”“大彩”）在不同社区里定义略有出入，可结合 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 上的说明进行比对。</li>
+                <li>若遇到不熟悉的奖励模式，先查看帮助页或规则摘要，大部分疑惑都能在那里找到答案。</li>
+            </ul>
+        </div>
+
+        <!-- 卡片：相关信息区 -->
+        <div class="card">
+            <h2>🔗 相关信息区</h2>
+            <p>以下条目与水果机主题常被一同提及，适合延伸浏览：</p>
+            <ul>
+                <li>经典 7 格转盘与扩展样式</li>
+                <li>倍率设定与分数对照表</li>
+                <li>图标权重与概率说明（仅作知识了解）</li>
+                <li>历史版本界面变迁参考</li>
+            </ul>
+            <p style="margin-top: 0.7rem; font-size: 0.9rem;">这些内容在 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 及其他爱好者页面中均有收录。</p>
+        </div>
+    </div>
+
+    <!-- 独立提示条 -->
+    <div class="notice-strip">
+        <span class="label">📌 日常对照</span>
+        <span class="text">查询时留意版本标注，部分旧版规则已调整。推荐先在 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 上确认当前机制再对照。</span>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 三个更细分的相关区块：延伸阅读 -->
+    <h2 style="font-weight: 400; font-size: 1.2rem; color: #2f4055; margin-bottom: 0.8rem;">延伸阅读 · 常见查询分类</h2>
+    <div class="related-area">
+        <div class="related-item">
+            <h3>🍎 图标与赔率</h3>
+            <p>常见水果、铃铛、BAR 等图标的赔付线组合方式，不同机型间的差异整理。</p>
+            <p style="margin-top: 0.4rem;"><a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 的图标清单可作基准对照。</p>
+        </div>
+        <div class="related-item">
+            <h3>🧩 模式与规则</h3>
+            <p>自由游戏、累积奖、双倍区等常见模式的触发条件和限制说明。</p>
+            <p style="margin-top: 0.4rem;">规则细节以 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 上的描述为准。</p>
+        </div>
+        <div class="related-item">
+            <h3>📚 术语小记</h3>
+            <p>“分散图标”“百搭”“赔付线”“倍率递增”——索引常用词汇，便于查阅。</p>
+            <p style="margin-top: 0.4rem;">更多术语解释可参考 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 相关内容。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要（不带问号句式，自然叙述） -->
+    <div style="margin-top: 2rem; background: #fafcfd; border-radius: 20px; border: 1px solid #e3eaf3; padding: 1.8rem;">
+        <h2 style="font-size: 1.2rem; font-weight: 500; margin-bottom: 0.8rem; color: #1f2e40;">📋 常见查询摘要</h2>
+        <p style="max-width: 700px; margin-bottom: 0.6rem;">许多人在初次接触时会关心同一类问题：图标排列是否有固定模式？赔率表在哪里看？不同版本的操作方式是否一致？这些通常可以在 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 的说明区域找到直接答案。</p>
+        <p style="max-width: 700px; margin-bottom: 0.6rem;">此外，关于“是否支持调整速度”以及“特殊奖励的触发条件”，也属于被频繁查询的条目，建议先阅读规则页再对照实践。</p>
+        <p style="max-width: 700px; color: #3f5568;">上述内容仅为知识索引，不构成操作建议。所有规则以 <a href="https://zh-fruitgames.com" class="soft-link">水果机</a> 官方说明为准。</p>
+    </div>
+
+    <!-- footer -->
+    <div class="footnote">
+        <span>知识库页面 · 日常查询与对照 · 内容仅供参考</span><br>
+        <span style="font-size: 0.8rem; opacity: 0.6;">索引编制基于公开资料，持续更新</span>
+    </div>
+
+</div>
+</body>
+</html>
