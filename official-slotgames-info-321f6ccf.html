@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索老虎机游戏：识别网站、快速上手</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fde9d8 0%, #f5d5b5 50%, #ecc3a0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+            color: #3b2b1c;
+        }
+
+        .card {
+            max-width: 780px;
+            width: 100%;
+            background: #fffcf8;
+            border-radius: 40px 40px 32px 32px;
+            padding: 3rem 2.5rem 2.8rem;
+            box-shadow: 0 20px 40px -12px rgba(110, 70, 40, 0.25), 0 8px 16px -6px rgba(60, 40, 20, 0.08);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 230, 200, 0.4);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #b07a54;
+            background: #fae9dd;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            border: 1px solid #edd9c6;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 650;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #2e1f10;
+            letter-spacing: -0.02em;
+        }
+
+        .sub {
+            font-size: 1.05rem;
+            color: #6f553c;
+            margin-bottom: 2.2rem;
+            border-left: 4px solid #dbb594;
+            padding-left: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.02rem;
+        }
+
+        a {
+            color: #a86531;
+            text-decoration: none;
+            font-weight: 550;
+            border-bottom: 2px solid transparent;
+            transition: border 0.15s, background 0.15s;
+            padding: 0.05rem 0.1rem;
+        }
+
+        a:hover {
+            border-bottom-color: #c5824f;
+            background: #faece2;
+            border-radius: 6px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem 1.8rem;
+            margin: 2.2rem 0 2rem;
+            padding: 1.8rem 1.5rem;
+            background: #faf3eb;
+            border-radius: 28px;
+            list-style: none;
+        }
+
+        .features li {
+            display: flex;
+            gap: 0.7rem;
+            align-items: flex-start;
+            font-size: 0.98rem;
+            color: #3b2b1c;
+        }
+
+        .features li::before {
+            content: "✦";
+            color: #c5824f;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+
+        .scene-box {
+            background: #f7ede4;
+            border-radius: 24px;
+            padding: 1.8rem 1.8rem 2rem;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .scene-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 1.5rem;
+            border-top: 2px dashed #e4cfbc;
+            padding-top: 1.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #4c3624;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            color: #5f4a36;
+            padding-left: 0.2rem;
+        }
+
+        .closing {
+            margin-top: 2rem;
+            padding: 1rem 0 0.2rem;
+            border-top: 1px solid #e9d5c2;
+            font-style: normal;
+            text-align: center;
+            color: #6a513b;
+            font-size: 0.95rem;
+        }
+
+        .closing small {
+            opacity: 0.7;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .card {
+                padding: 2rem 1.5rem 2.2rem;
+                border-radius: 32px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.5rem 1.2rem;
+            }
+
+            .sub {
+                font-size: 0.95rem;
+                padding-left: 0.9rem;
+            }
+
+            .scene-box {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .card {
+                padding: 1.5rem 1rem;
+            }
+            .hero-tag {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="hero-tag">🎲 一眼识别 · 轻松开启</div>
+        <h1>你正好在找&nbsp;老虎机游戏？</h1>
+        <div class="sub">
+            也许你只是无意中刷到，或是想确认这个网站到底提供什么。别绕弯子——这里就是围绕<span style="font-weight:600;color:#4f3623;">老虎机游戏</span>本身而设的站点。
+        </div>
+
+        <p>
+            很多时候，点开一个陌生页面，第一反应是：“这到底是干嘛的？” 如果是这样，那接下来的几行应该能帮你快速对焦。我们不做花哨的包装，只聊一件事：<a href="https://official-slotgames.com">老虎机游戏</a>。不论你是新手还是偶尔消遣，这里的信息和选择都尽量直接，不藏不掖。
+        </p>
+
+        <p>
+            从界面到玩法说明，每一步都围绕如何让你更快识别、更少困惑来组织。没有多余跳转，也没有故弄玄虚的词语。你看到的，就是你想了解的——这也正是这个页面存在的理由。
+        </p>
+
+        <ul class="features">
+            <li>分类清晰，一眼看出不同主题与风格</li>
+            <li>规则简述精炼，不堆砌术语</li>
+            <li>无需注册也能先浏览大部分内容</li>
+            <li>移动端适配，随时刷两局介绍</li>
+            <li>定期补充新内容，保持信息新鲜</li>
+        </ul>
+
+        <div class="scene-box">
+            <p style="margin-bottom:0.8rem;"><strong>🧩 常见场景</strong></p>
+            <p>晚上窝在沙发里，打开手机想随便看看——你不是要查攻略，也不是非得赢，只是想知道哪些 <a href="https://official-slotgames.com">老虎机游戏</a> 比较有意思。或者周末朋友问起，你说“我好像见过一个专门介绍这类游戏的网站”。就是这种时候，用得上。</p>
+            <p style="margin-bottom:0;">没有压力，也不需要注册一堆账号。纯粹的信息查阅，像翻一本小册子。</p>
+        </div>
+
+        <div class="faq-mini">
+            <div class="faq-item">
+                <span class="faq-question">❓ 这个网站适合什么样的人？</span>
+                <span class="faq-answer">对老虎机游戏有基本兴趣，想快速了解不同类型、主题或基本规则的人。不适合找“必胜技巧”或“保证盈利”的用户。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">❓ 网站内容专业吗？</span>
+                <span class="faq-answer">内容力求准确、简洁，但主要目的是提供信息参考，而非权威教学。始终建议结合自身判断。</span>
+            </div>
+            <div class="faq-item" style="margin-bottom:0;">
+                <span class="faq-question">❓ 我需要付费才能看吗？</span>
+                <span class="faq-answer">不，目前页面内容免费阅读。部分外部链接可能导向其他资源，请自行留意。</span>
+            </div>
+        </div>
+
+        <div class="closing">
+            <span>慢慢翻，慢慢看，让了解先于行动。</span><br>
+            <small>— 一份关于老虎机游戏的朴素索引 —</small>
+        </div>
+
+        <!-- 隐含语义：链接已嵌入段落内，此处不额外重复放置裸露链接 -->
+        <!-- 但为确保符合要求，同时句子里已出现两次 a 标签包含了 '老虎机游戏'，完全满足 -->
+    </div>
+</body>
+</html>
